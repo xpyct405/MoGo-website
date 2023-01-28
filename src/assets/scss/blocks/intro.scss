@@ -1,0 +1,343 @@
+.intro{
+    background: url("../../assets/img/intro_bg.jpg") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-color: #e6e6e6;
+    padding: 30px;
+}
+.intro-page{
+    display: flex;
+    flex-direction: column;
+}
+
+// Header
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+    align-items:center;
+    position:relative;
+}
+
+.intro__logo{
+    font-size: 3rem;
+    font-weight: bold;
+    color: $white;
+    transition: all .2s linear;
+    padding-right: 10rem;
+    &:hover{
+        color: $yellow;
+        transform: rotate(-.01turn);
+    }
+}
+
+.nav{
+    width: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: relative;
+    &__link{
+        position: relative;
+        color: $white;
+        text-transform: uppercase;
+        transition: all .2s linear;
+        &:hover{
+            transform: translateY(-2px);
+            color:$yellow;  
+             &::after{
+                content: '';
+                position: absolute;
+                border-bottom: 2px solid $yellow;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+            }
+        }
+        &.active{
+            color: $yellow; 
+            &:after{
+                content: '';
+                position: absolute;
+                border-bottom: 2px solid $yellow;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+            }
+        }
+        &-basket {
+            display: flex;
+            align-items:center;
+        }
+        &-basket span{
+            display: none;
+        }
+        &-loop {
+            display: flex;
+            align-items:center;
+        }
+        &-loop span{
+            display: none;
+        }
+
+    }
+            
+} 
+
+// МЕНЮ БУРГЕР
+.menu-burger {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    transition: 0.4s;
+    display: none;
+    background-color: transparent;
+    transition: background-color 1.3s ease;
+        &-lines,
+        &-lines::before,
+        &-lines::after{
+        position: absolute;
+        top: 18px;
+        width: 24px;
+        height: 3px;
+        background-color: $white;
+        transition: 0.4s;
+        }
+        &-lines:hover{
+            background-color: $lightblue;
+        }
+        &-lines{
+            left: 0;
+        }
+        &-lines::before{
+            content: '';
+            top: 8px
+        }
+        &-lines::after{
+            content: '';
+            top: -8px
+        }
+    
+        &:hover,
+        &.active{
+            transition:  all 0.2s ease-out;
+        }
+        &:hover .menu-burger-lines,
+        &.active .menu-burger-lines{
+            background-color: transparent;
+            width: 0;
+        }
+        &.active .menu-burger-lines::before{
+            top: 0;
+            transform: rotate(45deg);
+        }
+        &.active .menu-burger-lines::after{
+            top: 0;
+            transform: rotate(-45deg);
+        }
+}
+
+// Mogo
+.mogo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    &__template{
+        margin-bottom: 5rem;
+    }
+    &__template,
+    &__welcome{
+        color: $white;
+        font-size: 7.2rem;
+        text-align: center;
+        line-height: 1;
+    }
+    &__welcome{
+        position: relative;
+        font-size: 15rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-bottom: 7rem;
+        margin-bottom: 7rem;
+        &:after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            border-bottom: 3px solid $white;
+            width: 6rem;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+    }
+    a{
+        align-self:center;
+    }
+    &__btn{
+        border: 3px solid $white;
+        text-align: center;
+        color: $white;
+        width: 164px;
+        padding: 12px 30px;
+        text-transform: uppercase;
+        background-color:transparent;
+        transition: all .1s linear;
+        &:hover{
+            color: $black;
+            font-weight: 500;
+            background-color: $white;
+        }
+    }
+
+}
+
+
+.slider{
+    padding-bottom: 10px;
+    &__item {
+        opacity: 60%;
+        position: relative;
+        color: $white;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        padding-top: 10px;
+        border-top: 2px solid $white;
+        width: 70%;  
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+
+        &:hover{
+            opacity: 1;
+        }
+        span{
+            font-size: 2.4rem;
+            font-weight: bold;
+            padding-right: 5px;
+        }
+
+        &.active{
+            opacity: 1;  
+
+            &:before{
+                content: "";
+                position: absolute;
+                top: -3px;
+                left: 0;
+                border: 2px solid $red;
+                width: 20%;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 992px){
+    .mogo__welcome{
+        font-size: 10rem;
+    }
+    .mogo__template{
+        font-size: 6.2rem;
+    }
+};
+
+
+@media (max-width: 768px){
+
+    .nav{
+        display: none;
+        z-index: 999;
+        position: absolute;
+        max-width: 400px;
+        right: 0;
+        top: 60px;
+        border-radius: 15px 0 15px 15px;
+        background: $red;
+        padding: 20px 40px;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        &__link{
+            font-size: 2.4rem;
+            font-weight: 600;
+            padding: 5px 10px;
+            text-align: left;
+            position: relative;
+            color: $white;
+            text-transform: uppercase;
+            transition: all .1s linear;
+            &:hover{
+                transform: translateY(0);
+                color:$yellow;  
+                 &::after{
+                    content: '';
+                    position: absolute;
+                    border-bottom: 1px solid $yellow;
+                    bottom: 5px;
+                    left: 0;
+                    width: 100%;
+                }
+            }
+            &.active{
+                color: $yellow; 
+                &:after{
+                    content: '';
+                    position: absolute;
+                    border-bottom: none;
+                    bottom: -10px;
+                    left: 0;
+                    width: 100%;
+                }
+            }
+            &-basket span{
+                display: block;
+                margin-left: 10px;
+            }
+            &-loop span{
+                display: block;
+                margin-left: 10px;
+            }
+    
+        }
+                
+    } 
+    .nav.active{
+        display: flex;
+    }
+    .menu-burger{
+        display: block;
+    }
+    .mogo__welcome{
+        font-size: 6rem;
+    }
+    .mogo__template{
+        font-size: 5.2rem;
+    }
+    .slider__item span {
+        display: none;
+    }
+};
+
+
+
+// .menu-burger:hover + .nav{
+//     display: flex;
+//     opacity: 1;
+//     pointer-events: all;
+// }
+
+
+
+
+
+
+// X-Small	None	<576px
+// Small	sm	≥576px
+// Medium	md	≥768px
+// Large	lg	≥992px
+// Extra large	xl	≥1200px
+// Extra extra large	xxl	≥1400px

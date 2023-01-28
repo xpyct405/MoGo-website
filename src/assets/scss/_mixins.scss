@@ -1,0 +1,33 @@
+// Миксины- это повторяющиеся участки кода, которые можно включать в различные селекторы. Миксины объявляются директивой @mixin. После неё должно стоять имя миксина и, опционально, его параметры, а также блок, содержащий тело миксина. Например, можно определить миксин flexible(), который далее будет включён, например, в класс .centered-elements следующим образом:
+
+// @mixin flexible () {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+
+// .centered-elements {
+//     @include flexible ();
+//     border: 1px solid gray;
+//   }
+
+
+// это тоже самое, что и 
+// .centered-elements {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border: 1px solid gray;
+//   }
+
+
+
+
+
+// @mixin breakpoint($bp) {
+    
+//     @media screen and (max-width: $bp) {
+//         @content;
+//     }
+    
+// }

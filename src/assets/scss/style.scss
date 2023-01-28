@@ -1,0 +1,122 @@
+// COMMON
+@import "vars";
+@import "mixins";
+@import "vendor/reset";
+
+
+html {
+    font-size:  62.5%; /* font-size 1em = 10px on default browser settings */
+    line-height: 1.6;
+  }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size:  62.5%; /* font-size 1em = 10px on default browser settings */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: $black;
+    font-size: 1.4rem;
+    overflow-x:hidden; // Убирает горизонтальный скрол
+    
+}
+
+
+body i {
+  font-family:'FontAwesome'!important;
+  color: #fff;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+
+.container{ 
+  max-width: 1200px;
+}
+
+a{
+  text-decoration: none;
+  color: $black;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.page-slogan{
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+
+.cursive{
+  font-family: 'Kaushan Script', cursive;
+  padding-top: 90px;
+  text-align: center;
+  margin-bottom: 10px;
+}   
+
+.page-title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  padding-bottom: 4rem;
+  margin-bottom: 6rem;
+  &:after{
+      content: "";
+      position: absolute;
+      border-bottom: 3px solid $red;
+      width: 6rem;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+  }
+}
+
+.page-desc{
+  max-width: 954px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: $lightgrey;
+  padding-bottom: 105px;
+}
+
+.block{
+  // background-color: #dbdbdb;
+  min-height: 100%;
+}
+
+
+// @media (max-width: 768px) {
+//     span {
+//         font-size: 20px;
+//         color: green;
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     body {
+//         background-color: blue;
+//     }
+// }
+
+// BLOCKS
+@import 'blocks/intro';
+@import 'blocks/about';
+@import 'blocks/footer';

@@ -1,0 +1,38 @@
+.footer {
+    background-color:#f8f8f8;
+    &-row{
+        display: flex;
+        flex-direction: row;
+        height: 300px;
+    }
+
+    &__mogo{
+        width: 510px;
+        padding-right: 40px;
+        &-logo{
+            font-size: 46px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            color: $grey;
+        }
+        &-desc{
+            padding-top: 40px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            line-height: 24px;
+            color: $lightgrey;
+        }
+        &-subs{
+            padding-top: 50px;
+            font-size: 15px;
+            color: $black;
+            & span {
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+    &__blogs{
+        width: 420px;
+    }
+}
