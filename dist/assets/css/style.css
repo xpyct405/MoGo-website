@@ -1825,25 +1825,24 @@ p {
 .footer-row {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    height: 300px;
 }
 
 .footer__mogo {
-    width: 510px;
-    padding-right: 40px;
+    width: 500px;
+    padding-right: 50px;
+    margin-top: 70px;
 }
 
 .footer__mogo-logo {
     font-size: 46px;
+    line-height: 100%;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: #cccccc;
 }
 
 .footer__mogo-desc {
-    padding-top: 40px;
+    padding-top: 35px;
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     line-height: 24px;
@@ -1862,5 +1861,153 @@ p {
 }
 
 .footer__blogs {
-    width: 420px;
+    width: 415px;
+}
+
+.footer__urls {
+    color: #999999;
+    font-style: italic;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #cccccc;
+    margin-top: 18px;
+    padding-top: 18px;
+}
+
+.footer__urls-a {
+    padding-left: 15px;
+}
+
+.footer__urls i {
+    font-size: 16px;
+    color: #95e1d3;
+    padding: 0 5px;
+}
+
+.footer__email {
+    margin-top: 40px;
+    position: relative;
+}
+
+.footer__email input {
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    height: 40px;
+    min-width: 230px;
+    padding: 15px;
+    display: inline-block;
+    color: #999999;
+    opacity: 0.8;
+    border: 1px solid #e7e7e7;
+}
+
+.footer__email button {
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    margin-left: -1px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    background-color: #95e1d3;
+    border: none;
+}
+
+.footer__blogs {
+    padding-right: 50px;
+}
+
+.footer__blogs-title {
+    font-size: 14px;
+    line-height: 100%;
+    margin-top: 85px;
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 600;
+}
+
+.footer__blogs-container {
+    margin-top: 40px;
+}
+
+.footer__blogs-item {
+    margin-top: 42px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.footer__blogs-item-img {
+    background-color: black;
+    min-width: 120px;
+    min-height: 80px;
+}
+
+.footer__blogs-item-text {
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.footer__blogs-item-title {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.footer__blogs-item-date {
+    font-size: 13px;
+    font-family: Roboto, sans-serif;
+    font-weight: light;
+    font-style: italic;
+    line-height: 24px;
+    color: #999999;
+}
+
+.footer__inst-title {
+    font-size: 14px;
+    line-height: 100%;
+    margin-top: 85px;
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 600;
+}
+
+.footer__inst-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer__inst-item {
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 90px;
+    min-height: 90px;
+    padding: 2px;
+}
+
+.footer__inst-item img {
+    background-color: black;
+}
+
+.footer__inst-more {
+    margin-top: 25px;
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    opacity: 0.8;
+    color: #333333;
+    font-style: italic;
+}
+
+.footer__copy {
+    border-top: 1px solid #e7e7e7;
+    margin-top: 70px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer__copy a {
+    color: #f38181;
 }

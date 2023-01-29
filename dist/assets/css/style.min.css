@@ -1555,7 +1555,7 @@ p {
 }
 
 .footer__mogo {
-  width: 500px;
+  max-width: 500px;
   padding-right: 50px;
   margin-top: 70px;
 }
@@ -1583,7 +1583,7 @@ p {
   font-weight: bold;
 }
 .footer__blogs {
-  width: 415px;
+  max-width: 415px;
 }
 .footer__urls {
   color: #999999;
@@ -1619,7 +1619,8 @@ p {
 .footer__email button {
   position: absolute;
   display: inline-block;
-  width: 150px;
+  max-width: 150px;
+  min-width: 120px;
   height: 40px;
   margin-left: -1px;
   font-size: 14px;
@@ -1711,4 +1712,37 @@ p {
 }
 .footer__copy a {
   color: #f38181;
+}
+
+@media (max-width: 992px) {
+  .footer-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__mogo {
+    max-width: 100%;
+    margin-top: 30px;
+    padding-right: 0;
+  }
+  .footer__mogo-logo {
+    text-align: center;
+  }
+  .footer__mogo-desc {
+    text-align: center;
+    padding-top: 20px;
+  }
+  .footer__mogo-subs {
+    text-align: center;
+    padding-top: 20px;
+  }
+  .footer__email {
+    display: flex;
+    display: inline-block;
+  }
+  .footer__blogs {
+    max-width: 100%;
+  }
+  .footer__inst {
+    max-width: 100%;
+  }
 }

@@ -6,7 +6,7 @@
 }
 .footer {
     &__mogo{
-        width: 500px;
+        max-width: 500px;
         padding-right: 50px;
         margin-top: 70px;
         &-logo{
@@ -34,7 +34,7 @@
         }
     }
     &__blogs{
-        width: 415px;
+        max-width: 415px;
     }
     &__urls{
         color: #999999;
@@ -70,7 +70,8 @@
         & button{
             position: absolute;
             display: inline-block;
-            width: 150px;
+            max-width: 150px;
+            min-width: 120px;
             height: 40px;
             margin-left: -1px;
             font-size: 14px;
@@ -175,3 +176,52 @@
     }
     // display: block;
 }
+
+
+// X-Small	None	<576px
+// Small	sm	≥576px
+// Medium	md	≥768px
+// Large	lg	≥992px
+// Extra large	xl	≥1200px
+// Extra extra large	xxl	≥1400px
+
+@media (max-width: 992px){
+.footer-row {
+    display: flex;
+    flex-direction: column
+}
+
+// First column
+.footer__mogo{
+    max-width: 100%;
+    margin-top: 30px;
+    padding-right: 0;
+    &-logo{
+        text-align: center;
+    }
+    &-desc{
+        text-align: center;
+        padding-top: 20px;
+    }
+    &-subs{
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+.footer__urls{}
+.footer__email{
+    display: flex;
+    display: inline-block;
+}
+
+
+// Second column
+.footer__blogs{max-width: 100%}
+
+// Third column
+.footer__inst{max-width: 100%}
+};
+
+@media (max-width: 768px){
+             
+} 
