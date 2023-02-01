@@ -1,4 +1,4 @@
-// INTRO
+// INTRO HEADER
 let nav =document.querySelector('.nav');
 let btn = document.querySelector('.menu-burger')
 
@@ -43,6 +43,28 @@ btn.addEventListener('click', function(){
  
 
 // ABOUT
+
+// QUOTE SLIDER
+// SLIDER
+
+// https://tproger.ru/articles/javascript-slider/
+// Устанавливаем стартовый индекс слайда по умолчанию
+let slideIndex = 1;
+// Вызываем функцию, которая реализована ниже:
+showSlides(slideIndex);
+
+// Увеличиваем индекс на 1- показываем следующий слайд:
+function nextSlide(){
+
+}
+
+
+
+
+
+
+
+
 
 // WHAT WE DO
 let header = document.querySelectorAll('.wedo__item-header');
