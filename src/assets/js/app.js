@@ -48,48 +48,51 @@ btn.addEventListener('click', function(){
 // SLIDER
 
 // https://tproger.ru/articles/javascript-slider/
-// Устанавливаем стартовый индекс слайда по умолчанию
-let slideIndex = 1;
-// Вызываем функцию, которая реализована ниже:
-showSlides(slideIndex);
+// https://www.cyberforum.ru/javascript/thread2888337.html
 
-// Увеличиваем индекс на 1- показываем следующий слайд:
-function nextSlide() {
+/* Увеличиваем индекс на 1 — показываем следующий слайд: */
+document.querySelector(".nextSlide").onclick = () => {
     showSlides(slideIndex += 1);
+    console.log(slideIndex);
 }
 
-// Уменьшаем индекс на 1- показываем предыдущий слайд:
-function previousSlide() {
+/* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
+document.querySelector(".previousSlide").onclick = () => {
     showSlides(slideIndex -= 1);
+    console.log(slideIndex);
 }
 
-// Устанавливаем текущий слайд:
+/* Устанавливаем текущий слайд: */
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-// Функция перелистывания:
-function showSlides(n){
-    // Обращаемся к элементам с названием класса "item"
-    let slides = document.getElementsByClassName('quote__item');
+/* Устанавливаем стартовый индекс слайда по умолчанию: */
+let slideIndex = 1;
+/* Вызываем функцию, которая реализована ниже: */
+showSlides(slideIndex);
 
-    // Проверяем количество слайдов:
-    if (n > slides.length) {
-        slideIndex = 1
+/* Функция перелистывания: */
+function showSlides(n) {
+    /* Обращаемся к элементам с названием класса "quote__item", то есть к картинкам: */
+    let slides = document.querySelectorAll(".quote__item");
+
+    /* Проверяем количество слайдов: */
+    if (n >= slides.length) {
+      slideIndex = 1
     }
     if (n < 1) {
         slideIndex = slides.length
     }
 
-    // Проходим по каждому слайду в цикле for:
-    for (let slide of slides) {
-        slide.style.display = "none";
+    /* Проходим по каждому слайду в цикле for: */
+    for (let i = 0; i <slides.length; i++) {
+        slides[i].style.display = "none";
     }
-    // Делаем элемент блочным:
-    slides[slideIndex - 1].style.display = 'flex';
+
+    /* Делаем элемент flex: */
+    slides[slideIndex - 1].style.display = "flex";
 }
-console.log(slideIndex);
-console.log(slides.length);
 
 
 

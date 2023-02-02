@@ -706,7 +706,7 @@ p {
 }
 
 .slider__item:hover {
-    opacity: 1;
+    opacity: 100%;
 }
 
 .slider__item span {
