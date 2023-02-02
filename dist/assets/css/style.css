@@ -1144,33 +1144,16 @@ p {
     text-align: center;
 }
 
-.quote__left, .quote__right {
-    display: block;
-    width: 25px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.quote__left {
-    background: url(../../assets/img/arrow-left.png) center no-repeat;
-    padding-left: 10px;
-    padding-right: 40px;
-}
-
-.quote__right {
-    background: url(../../assets/img/arrow-right.png) center no-repeat;
-    padding-right: 10px;
-    padding-left: 40px;
-}
-
 .quote__item {
+    max-width: 90%;
+    margin: 0 auto;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
     flex-direction: row;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 50px;
     -ms-flex-align: center;
     align-items: center;
 }
@@ -1186,12 +1169,6 @@ p {
 
 .quote__item-desc {
     padding: 0 0 0 60px;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
     text-align: start;
 }
 
@@ -1219,6 +1196,26 @@ p {
     position: absolute;
     top: 50%;
     left: 0;
+}
+
+.quote__left, .quote__right {
+    cursor: pointer;
+    position: absolute;
+    padding: 30px 30px 40px 30px;
+    border-radius: 8px;
+    font-size: 40px;
+    color: rgba(158, 155, 155, 0.8);
+    margin: auto;
+}
+
+.quote__left:hover, .quote__right:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgb(158, 155, 155);
+    transition: 0.2s;
+}
+
+.quote__right {
+    right: 0;
 }
 
 .team__items {

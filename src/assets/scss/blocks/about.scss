@@ -354,6 +354,7 @@
         font-size: 40px;
         color:rgba(158, 155, 155, 0.8);
         margin: auto;
+        // background: url(../../assets/img/arrow-left.png) center no-repeat;
         &:hover{
             background-color: rgba(0, 0, 0, 0.1);
             color:rgba(158, 155, 155, 1);
@@ -362,17 +363,9 @@
     } 
     &__right{
         right: 0;
-    }
-    &__left{
-        // background: url(../../assets/img/arrow-left.png) center no-repeat;
-        // padding-left: 10px;
-        // padding-right: 40px;
-    }
-    &__right{
         // background: url(../../assets/img/arrow-right.png) center no-repeat;
-        // padding-right: 10px;
-        // padding-left: 40px;
     }
+
     
 }
 
