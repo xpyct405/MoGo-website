@@ -27,6 +27,8 @@
             padding-top: 50px;
             font-size: 15px;
             color: $black;
+            border-bottom: 1px solid $grey;
+            padding-bottom: 18px;
             & span {
                 font-size: 18px;
                 font-weight: bold;
@@ -36,15 +38,17 @@
     &__blogs{
         max-width: 415px;
     }
+    &__connect{
+        display: flex;
+        flex-wrap: wrap;
+    }
     &__urls{
         color: #999999;
         font-style: italic;
         display: flex;
-        border-top: 1px solid $grey;
-        margin-top: 18px;
         padding-top: 18px;
         &-a{
-            padding-left: 15px;
+            padding-left: 1px;
         }
         & i {
             font-size: 16px;
@@ -55,6 +59,7 @@
     &__email{
         margin-top: 40px;
         position: relative;
+        min-width: 350px;
         
         & input {
             font-family: 'Roboto', sans-serif;
@@ -101,11 +106,14 @@
     &-item{
         margin-top: 42px;   
         display: flex;
-        // flex-direction: row;
+        transition: all .4s ease;
+        &:hover .footer__blogs-item-img{
+            transform: scale(120%);
+        }
         &-img{
-            background-color: black;
             min-width:120px;
             min-height: 80px;
+            transition: all .4s ease;
         }
         &-text{
             margin-left: 20px;
@@ -146,6 +154,10 @@
         min-width: 90px;
         min-height: 90px;
         padding: 2px;
+        transition: all .4s ease;
+        &:hover{
+            transform: scale(120%);
+        }
         & img {
             background-color: black;
         }
@@ -186,42 +198,90 @@
 // Extra extra large	xxl	≥1400px
 
 @media (max-width: 992px){
-.footer-row {
-    display: flex;
-    flex-direction: column
-}
-
-// First column
-.footer__mogo{
-    max-width: 100%;
-    margin-top: 30px;
-    padding-right: 0;
-    &-logo{
-        text-align: center;
+    .footer-row {
+        display: flex;
+        flex-direction: column
     }
-    &-desc{
-        text-align: center;
-        padding-top: 20px;
+
+    // First column
+    .footer__mogo{
+        max-width: 100%;
+        margin-top: 30px;
+        padding-right: 0;
+        &-logo{
+            text-align: center;
+        }
+        &-desc{
+            text-align: center;
+            padding-top: 20px;
+        }
+        &-subs{
+            text-align: center;
+            padding-top: 20px;
+        }
     }
-    &-subs{
-        text-align: center;
-        padding-top: 20px;
+    .footer__connect{ 
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footer__urls{
+
+    }
+    .footer__email{
+        margin-top: 0;
+        padding-top: 18px;
+    }
+
+
+    // Second column
+    .footer__blogs{
+        max-width: 100%;
+        padding: 0;
+        &-title{
+            margin-top: 70px;
+            text-align: center;
+        }
+        &-container{
+            display: flex;
+        }
+        &-item{
+            margin-top: 10px;
+            padding-right: 20px;
+        }
+    }
+
+
+    // Third column
+    .footer__inst{
+        max-width: 100%;
+        &-title{
+            margin-top: 70px;
+            text-align: center
+        }
+        &-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &-item{
+            height: 120px;
+        }
     }
 }
-.footer__urls{}
-.footer__email{
-    display: flex;
-    display: inline-block;
-}
-
-
-// Second column
-.footer__blogs{max-width: 100%}
-
-// Third column
-.footer__inst{max-width: 100%}
-};
 
 @media (max-width: 768px){
-             
+    // First column
+    .footer__urls{
+        margin-top: 20px;
+    }
+    .footer__email{
+        margin-top: 20px;
+    } 
+    // Second column
+    .footer__blogs{
+        &-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
 } 
