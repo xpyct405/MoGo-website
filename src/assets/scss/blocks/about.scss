@@ -285,8 +285,6 @@
     }
 }
 
-
-
 // Цитаты
 .quotes {
     background-color: #f8f8f8;
@@ -294,18 +292,18 @@
 }
 .quote{
     display: flex;
-    padding: 7rem 0;
+    padding: 60px 0;
     position: relative;
     justify-content: space-between;
     text-align: center;
 
     &__item{
-        max-width: 90%;
+        max-width: 100%;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 0 50px;
+        padding: 0 100px;
         align-items: center;
         &-img{
             display: block;
@@ -345,28 +343,41 @@
             }
         }
     }
-    &__left,
-    &__right{
-        cursor: pointer;
-        position: absolute;
-        padding: 30px 30px 40px 30px;
-        border-radius: 8px;
-        font-size: 40px;
-        color:rgba(158, 155, 155, 0.8);
-        margin: auto;
-        // background: url(../../assets/img/arrow-left.png) center no-repeat;
-        &:hover{
-            background-color: rgba(0, 0, 0, 0.1);
-            color:rgba(158, 155, 155, 1);
-            transition: 0.2s;
-        }
-    } 
-    &__right{
-        right: 0;
-        // background: url(../../assets/img/arrow-right.png) center no-repeat;
-    }
-
+  
+    // Ниже стили ручного слайдера, также надо добавить текст &#8249; для < и &#8250; для >
+    // &__left,
+    // &__right{
+    //     cursor: pointer;
+    //     position: absolute;
+    //     padding: 30px 30px 40px 30px;
+    //     border-radius: 8px;
+    //     font-size: 40px;
+    //     color:rgba(158, 155, 155, 0.8);
+    //     margin: auto;
+    //     // background: url(../../assets/img/arrow-left.png) center no-repeat;
+    //     &:hover{
+    //         background-color: rgba(0, 0, 0, 0.1);
+    //         color:rgba(158, 155, 155, 1);
+    //         transition: 0.2s;
+    //     }
+    // } 
+    // &__right{
+    //     right: 0;
+    //     // background: url(../../assets/img/arrow-right.png) center no-repeat;
+    // }
     
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: $lightgrey;
+  transform: scale(70%);
+  opacity: 30%;
+  transition: all .3s ease;
+
+}
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+  opacity: 1;
 }
 
 

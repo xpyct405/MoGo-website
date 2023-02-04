@@ -989,18 +989,18 @@ p {
 
 .quote {
   display: flex;
-  padding: 7rem 0;
+  padding: 60px 0;
   position: relative;
   justify-content: space-between;
   text-align: center;
 }
 .quote__item {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 100px;
   align-items: center;
 }
 .quote__item-img {
@@ -1037,22 +1037,18 @@ p {
   top: 50%;
   left: 0;
 }
-.quote__left, .quote__right {
-  cursor: pointer;
-  position: absolute;
-  padding: 30px 30px 40px 30px;
-  border-radius: 8px;
-  font-size: 40px;
-  color: rgba(158, 155, 155, 0.8);
-  margin: auto;
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #999999;
+  transform: scale(70%);
+  opacity: 30%;
+  transition: all 0.3s ease;
 }
-.quote__left:hover, .quote__right:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: rgb(158, 155, 155);
-  transition: 0.2s;
-}
-.quote__right {
-  right: 0;
+
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+  opacity: 1;
 }
 
 .team__items {
