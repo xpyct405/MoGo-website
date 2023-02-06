@@ -1028,34 +1028,49 @@
                     <div class="footer__inst">
                         <div class="footer__inst-title">Instagram</div>
                         <div class="footer__inst-container">
-                            <a href="https://www.instagram.com/billieeilish/" class="footer__inst-item">
-                                <img src="assets/img/inst1.png" alt="inst 1">
-                            </a>
-                            <a href="https://www.instagram.com/billieeilish/" class="footer__inst-item">
-                                <img src="assets/img/inst2.png" alt="inst 2">
-                            </a>
-                            <a href="https://www.instagram.com/billieeilish/" class="footer__inst-item">
-                                <img src="assets/img/inst3.png" alt="inst 3">
-                            </a>
-                            <a href="https://www.instagram.com/billieeilish/" class="footer__inst-item">
-                                <img src="assets/img/inst4.png" alt="inst 4">
-                            </a>
-                            <a href="https://www.instagram.com/billieeilish/" class="footer__inst-item">
-                                <img src="assets/img/inst5.png" alt="inst 5">
-                            </a>
-                            <a href="https://www.instagram.com/billieeilish/" class="footer__inst-item">
-                                <img src="assets/img/inst6.png" alt="inst 6">
-                            </a>
-                            <a href="https://www.instagram.com/billieeilish/" class="footer__inst-item">
-                                <img src="assets/img/inst7.png" alt="inst 7">
-                            </a>
-                            <a href="https://www.instagram.com/billieeilish/" class="footer__inst-item">
-                                <img src="assets/img/inst8.png" alt="inst 8">
-                            </a>
-                            <a href="https://www.instagram.com/billieeilish/" class="footer__inst-item">
-                                <img src="assets/img/inst9.png" alt="inst 9">
-                            </a>
+                            <div class="footer__inst-item">
+                                <img class="footer__inst-container-img" src="assets/img/inst1.png" alt="inst 1">
+                            </div>
+                            <div class="footer__inst-item">
+                                <img class="footer__inst-container-img" src="assets/img/inst2.png" alt="inst 2">
+                            </div>
+                            <div class="footer__inst-item">
+                                <img class="footer__inst-container-img" src="assets/img/inst3.png" alt="inst 3">
+                            </div>
+                            <div class="footer__inst-item">
+                                <img class="footer__inst-container-img" src="assets/img/inst4.png" alt="inst 4">
+                            </div>
+                            <div class="footer__inst-item">
+                                <img class="footer__inst-container-img" src="assets/img/inst5.png" alt="inst 5">
+                            </div>
+                            <div class="footer__inst-item">
+                                <img class="footer__inst-container-img" src="assets/img/inst6.png" alt="inst 6">
+                            </div>
+                            <div class="footer__inst-item">
+                                <img class="footer__inst-container-img" src="assets/img/inst7.png" alt="inst 7">
+                            </div>
+                            <div class="footer__inst-item">
+                                <img class="footer__inst-container-img" src="assets/img/inst8.png" alt="inst 8">
+                            </div>
+                            <div class="footer__inst-item">
+                                <img class="footer__inst-container-img" src="assets/img/inst9.png" alt="inst 9">
+                            </div>
                         </div>
+    
+                        <!-- Модальное окно -->
+                        <div id="myModal" class="my-modal">
+    
+                            <!-- Кнопка закрытия -->
+                            <span class="close">&times;</span>
+    
+                            <!-- Содержание модального окна (изображение) -->
+                            <img class="modal-content" id="img01">
+    
+                            <!-- Текст модального окна -->
+                            <div id="caption"></div>
+                        </div>
+    
+    
                         <div class="footer__inst-more"><a href="https://www.instagram.com/billieeilish/">View more
                                 photos</a></div>
     
@@ -1080,8 +1095,10 @@
 
     <!-- Подключение моего скрипта -->
     <script type="text/javascript" src="assets/js/app.js"></script>
-    <!-- Slider. Quote -->
+    <!-- Слайдер работает только на секцию quotes файла about.html  -->
     <script type="text/javascript" src="assets/js/slider.js"></script>
+    <!-- Модальное окно. Служит для открытия изображений .footer__inst-item в модальном окне. Открывается по клику на изображение, закрывается при клике по крестику или вне изображения модального окна -->
+    <script type="text/javascript" src="assets/js/modal.js"></script>
 
 </body>
 

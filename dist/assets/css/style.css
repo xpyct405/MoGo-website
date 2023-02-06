@@ -716,7 +716,7 @@ p {
 }
 
 .slider__item.active {
-    opacity: 1;
+    opacity: 100%;
 }
 
 .slider__item.active:before {
@@ -1137,7 +1137,7 @@ p {
 .quote {
     display: -ms-flexbox;
     display: flex;
-    padding: 7rem 0;
+    padding: 60px 0;
     position: relative;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1145,7 +1145,7 @@ p {
 }
 
 .quote__item {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     display: -ms-flexbox;
     display: flex;
@@ -1153,7 +1153,7 @@ p {
     flex-direction: row;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 100px;
     -ms-flex-align: center;
     align-items: center;
 }
@@ -1198,24 +1198,18 @@ p {
     left: 0;
 }
 
-.quote__left, .quote__right {
-    cursor: pointer;
-    position: absolute;
-    padding: 30px 30px 40px 30px;
-    border-radius: 8px;
-    font-size: 40px;
-    color: rgba(158, 155, 155, 0.8);
-    margin: auto;
+.swiper-button-prev,
+.swiper-button-next {
+    color: #999999;
+    -webkit-transform: scale(70%);
+    transform: scale(70%);
+    opacity: 30%;
+    transition: all 0.3s ease;
 }
 
-.quote__left:hover, .quote__right:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: rgb(158, 155, 155);
-    transition: 0.2s;
-}
-
-.quote__right {
-    right: 0;
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+    opacity: 1;
 }
 
 .team__items {
@@ -1886,6 +1880,11 @@ p {
     font-size: 16px;
     color: #95e1d3;
     padding: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.footer__urls i:hover {
+    color: rgba(149, 225, 211, 0.8);
 }
 
 .footer__email {
@@ -1919,6 +1918,11 @@ p {
     text-transform: uppercase;
     background-color: #95e1d3;
     border: none;
+    transition: background-color 0.4s ease;
+}
+
+.footer__email button:hover {
+    background-color: rgba(149, 225, 211, 0.8);
 }
 
 .footer__blogs {
@@ -1946,8 +1950,11 @@ p {
 }
 
 .footer__blogs-item:hover .footer__blogs-item-img {
-    -webkit-transform: scale(120%);
-    transform: scale(120%);
+    opacity: 80%;
+}
+
+.footer__blogs-item:hover .footer__blogs-item-text {
+    opacity: 80%;
 }
 
 .footer__blogs-item-img {
@@ -2002,8 +2009,7 @@ p {
 }
 
 .footer__inst-item:hover {
-    -webkit-transform: scale(120%);
-    transform: scale(120%);
+    opacity: 80%;
 }
 
 .footer__inst-item img {
@@ -2030,6 +2036,80 @@ p {
     color: #f38181;
 }
 
+/* Style the Image Used to Trigger the Modal */
+.footer__inst-container-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer__inst-container-img:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+.my-modal {
+    display: none;
+ /* Hidden by default */
+    position: fixed;
+ /* Stay in place */
+    z-index: 1;
+ /* Sit on top */
+    padding-top: 100px;
+ /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+ /* Full width */
+    height: 100%;
+ /* Full height */
+    overflow: auto;
+ /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9);
+ /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close :hover {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
 @media (max-width: 992px) {
     .footer-row {
         display: -ms-flexbox;
@@ -2051,6 +2131,8 @@ p {
     .footer__mogo-desc {
         text-align: center;
         padding-top: 20px;
+        max-width: 90%;
+        margin: auto;
     }
 
     .footer__mogo-subs {
@@ -2083,6 +2165,8 @@ p {
     .footer__blogs-container {
         display: -ms-flexbox;
         display: flex;
+        max-width: 90%;
+        margin: 40px auto 0;
     }
 
     .footer__blogs-item {
@@ -2106,6 +2190,8 @@ p {
         flex-wrap: wrap;
         -ms-flex-pack: center;
         justify-content: center;
+        max-width: 90%;
+        margin: 40px auto 0;
     }
 
     .footer__inst-item {

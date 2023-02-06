@@ -220,7 +220,7 @@
         }
 
         &.active{
-            opacity: 1;  
+            opacity: 100%; 
 
             &:before{
                 content: "";
@@ -326,7 +326,7 @@
 
 // .menu-burger:hover + .nav{
 //     display: flex;
-//     opacity: 1;
+//     opacity: 100%;
 //     pointer-events: all;
 // }
 

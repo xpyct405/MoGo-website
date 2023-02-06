@@ -1,3 +1,9 @@
+// 1. 
+
+// Слайдер построенный на библиотеке swiper. 
+// Слайдер работает только на секцию quotes файла index.html
+// https://github.com/xpyct405/Slider-with-Swiper.js-library
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -27,10 +33,13 @@ const swiper = new Swiper('.swiper', {
   });
 
 
+// 2.
 
-// // Ниже представлен Слайдер на чистом JS. Слайдер простой, не адаптивен, не работает слайдом на телефоне, Только кнопки лево, право.
-// // https://tproger.ru/articles/javascript-slider/
-// // https://www.cyberforum.ru/javascript/thread2888337.html
+// Ниже представлен Слайдер на чистом JS. Слайдер простой, не адаптивен, не работает слайдом на телефоне, Только кнопки лево, право.
+// https://tproger.ru/articles/javascript-slider/
+// https://www.cyberforum.ru/javascript/thread2888337.html
+// https://github.com/xpyct405/Slider-on-simple-JS-non-responsive
+
 // /* Увеличиваем индекс на 1 — показываем следующий слайд: */
 // document.querySelector(".nextSlide").onclick = () => {
 //     showSlides(slideIndex += 1);
