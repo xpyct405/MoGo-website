@@ -14,14 +14,14 @@ for (let i = 0; i <img.length; i++) {
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt; 
+    console.log(i); // от 0 до 8
+    console.log(img.length); // 9
   })
 }
 
 
-// Получение кнопки закрытия Х <span>  
+// Получение кнопки закрытия Х <span>  // При клике на Х модальное окно закрывается.
 let closeBtn = document.getElementsByClassName("close")[0];
-
-// При клике на Х модальное окно закрывается.
 closeBtn.onclick = function() {
   modal.style.display = "none";
 }
@@ -33,7 +33,7 @@ modal.onclick = function (e) {
   // Ниже условие которое проверяет на какую область был onclick, и если на область которая включает modalImg, т.е. картинку, то возвращает true, иначе false
   // includes() определяет, содержит ли массив определённый элемент, возвращая в зависимости от этого true или false.
 	const withinBoundaries = e.composedPath().includes(modalImg);
-  console.log(withinBoundaries)
+  console.log(withinBoundaries) //true если клик по картинке и false при клике мимо картинки
 
 	if ( ! withinBoundaries ) {
 		modal.style.display = 'none'; // скрываем элемент т к клик был за его пределами
